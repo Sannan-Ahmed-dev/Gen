@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>100 Things I Love About You</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Poppins&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Yesteryear&family=Poppins&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Galada&family=Poppins&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Charm&display=swap" rel="stylesheet" />
+
+
+
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: #11001c;
+      background-size: contain, contain;
+      font-family: 'Charm', cursive;
+      overflow-x: hidden;
+      position: relative;
+    }
+    h1 {
+      text-align: center;
+      margin: 2rem 0;
+      font-size: 3rem;
+      color: #fff;
+      text-shadow: 2px 2px 4px #d9534f;
+    }
+
+    .reasons {
+        position: relative;
+        left: 1.5rem;
+      text-align: center;
+      margin: 2rem 0;
+      font-size: 3rem;
+      color: #fff;
+      text-shadow: 2px 2px 4px #d9534f;
+    }
+    .reasons-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 10rem;
+    }
+    .reason-btn {
+      background: linear-gradient(to right, #ff99cc, #ff66cc);
+      color: white;
+      font-size: 1.5rem;
+      padding: 1rem 2rem;
+      margin: 1rem;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      cursor: pointer;
+      width: 80%;
+      max-width: 400px;
+      font-family: 'Playfair Display', serif;
+    }
+    .reason-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    }
+    .reason-expanded {
+        background: #ffbfd9;
+    font-size: 1.7rem;
+    padding: 2rem;
+    margin: 1rem auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    animation: openEnvelope 0.6s ease forwards;
+    line-height: 1.8;
+    }
+    @keyframes openEnvelope {
+      0% {
+        transform: scaleY(0);
+        opacity: 0;
+      }
+      100% {
+        transform: scaleY(1);
+        opacity: 1;
+      }
+    }
+    .falling {
+      position: fixed;
+      top: -10%;
+      font-size: 2rem;
+      animation: fall 10s linear infinite;
+      color: #e91e63;
+      pointer-events: none;
+      z-index: 1000;
+    }
+    @keyframes fall {
+      to {
+        transform: translateY(120vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1 class="reasons">100 Reasons I Love You and Things I Love About You 💖</h1>
+  <div class="reasons-container" id="reasonsContainer"></div>
+  <script>
+    const container = document.getElementById('reasonsContainer');
+   const reasons = [
+  "I love your Smile SOSOSOSOSO MUCH like everytime i look at your smile i genuinly feel so happy from the inside",
+  "I love your EYES LIKE HOLYYY DONT EVEN GET ME STARTEDDD I LOVE THEM SO MUCH LIKE EVERYTIME I LOOK IN YOUR EYES I JS SEE PEACE YKK I SEE A FUTURE WITH YOU AND SEE SO MANY POSSIBILITIES SO MUCH HAPPINES I JS LOVE THE NATURAL BEAUTY U HAVE ESPPECIALLY YOUR EYES",
+  "I love your Laugh like everytime you laugh it makes me so happy like genuinely i feel so happy",
+  "I love your voice like i yearn for it everyday i cant hear it it makes me feel so much at peace like the sleep the peace the happines i get it just by listening to your voice is so unfathomable like i cant survive without it",
+  "I love your jokes SOSOSOSSSOSOSOSO MUCH like youre not supposed to no that but my god you are so funny you make me laugh so much and bring me happiness even when im sad im so happy i have you and your jokes cause i lowkey cant live without em (BUT YOU DONT KNOW THAT OKAY SHHHH)",
+  "I love the way you make me feel im just so happy when i talk to you",
+  "I love our little jokes like theyre definitly cringe but still i love them so much cause i get to have them with you",
+  "I love how compassionate you are towards people",
+  "I love how nice you treat people and especially animals",
+  "I love your music taste its js perfect",
+  "I love your sense of humour it makes me laugh so much you dont understand",
+  "I love the way you make those hand gestures while were on call its so cute and funny at the same time",
+  "I love when you lowkey js start saying random stuff like it makes mee feel so happy knowing ur that comfortable with me to be acting like that and i love every bit of it so pls never stop",
+  "I love your fashion and like LOVEEEEE SO MUCH LIKE EVERYTIME U WEAR SOMETHING U LOOK SO FREAKIN GOOD LIKE JS LE ME RIP EM CLOTHES OFFFFF i mean uhhh you have such a nice sense of fashion YEPPPPPPP",
+  "I love your face youre js so beautiful everytime were on call sometimes i js stare at u cause how could i not you look sooooooooooooo beautifulll no like seriouslyyyyyy you look so beautiful i js cant even explain it",
+  "I love the way you make any hard situation better like actually everytime i had a problem u made it better in not even less then a second",
+  "I love how patient you are with people sometimes theyre so annoying but youre so nice and patient i js love it",
+  "I love you so much cause you would make me smile in every situation in school like i would look over and u would be doing something and it was js so nice to have you there to make my day better",
+  "I love you because you make me feel happy",
+  "I love you because you make me feel at peace ",
+  "I love you because you make me feel like ive finally achieved something in life",
+  "I love you because the way you make my day brighter by js being there and the times u arent are so dull and empty",
+  "I love you because i love spending time with i rememeber when we played in school and i had so much fun only cause you cause you made everything so much better",
+  "I love you because even when youre getting yelled at or in trouble you lowkey still find a way to talk to me like i js love you so much baby",
+  "I love you because of the way youre so passionate about your future and goals ykk you know what you wanna be and it js makes me love you even more",
+  "I love you SOOOO MUCHHHH cause u literally made me so happy when we were sitting at the same table in science i was js in so much love with you but u made me laugh and everything and i just love you so much for that",
+  "MADE YOU LOOOOK HAHAHAHHAAHHHAHAHAHAHAHA uh pls dont hate me WERE STILL BESTFRIENDS RIGHTTTT ANYWAYSSSSS MOVING ON",
+  "I love the way you have fun in our jokes like JOEJOEJOE and our little fake fights theyre so much fun with you and i wouldnt want it any other way ",
+  "I love your hair IKKK i told u this before but ima say it again that perm was so freaking beautifull i wanted to compliment you so bad but i js couldnt get the courage too but they look so beautiful and perfect",
+  "I love you cause you never get tired of me",
+  "I love you cause you actually listen to me talk abt something random",
+  "I love you cause i can feel comfortable around and say whatever I want",
+  "I love you cause i genuinly dont know how you put up with me but you do and thats lowkey surprising BUT I STILL LOVE YOU SOOSSOSOSOSO FREAKING MUCH",
+  "I love you cause of the way you js play along with some random ass bits like the oh u said bad word or anything you play along and its so fun",
+  "I love you cause of the random ass stuff youre sometimes doing on call",
+  "I love you cause you dont really get mad at me that much",
+  "I love you so much cause i can have free and open conversations with you like that one night COUGHCOUGH YKKK",
+  "I love you CAUSE OF YOUR HUMOUNGOUS BUTTT LIKE OH MY GODDDDDDD HOLY MOLYYYYYY U CAN NOTTTT BE WALKING AROUND WITH ALL THAT GYATTT LIKE LE ME HAVE A BITE OF THATTTTTTTTTTTTT ",
+  "I love you cause of the way you love my gyatt",
+  "I love you cause of the way you glaze my pics",
+  "I love you cause u made me gain confidence to send u pics in the first place",
+  "I love you cause youre making me a better person",
+  "I love you cause youre the reason i dont wanna live my life eating dirty food and having no purpose in life",
+  "I love you cause even when somethings going wrong you still manage to reassure me that its gonna be all alright",
+  "I love you cause whenever I send you those big fat messages you acctually listen and dont js leave",
+  "I love you cause you make me wanna go to the gym eat healthy wake up early and have something to do in life",
+  "I love you cause everyday i have something to look forward too",
+  "I love you cause you make me smile everyday",
+  "I love you cause i love sharing stuff with you while you js listen",
+  "I love your voice when im sleeping",
+  "I love your voice when youre talking",
+  "I love your voice when ur talking abt something random",
+  "I love your eyes when u have the pillow in ur face and ur js looking at me",
+  "I love your inntellingce cause you lowkey cook sometimes",
+  "I love the way you get jeaulous sometimes",
+  "I loveeeeeeee the way you tell me stuff to do and i do em",
+  "I love doing stuff for you cause well you asked and it js makes me feel nice doing something for someone who actually cares for me and wants whats best for me",
+  "I love you cause of how much pain youve endured and youre still going",
+  "I love the way you talk to skippy the voice changes literally make my day",
+  "I love the way you js make random stuff funny",
+  "I lovee you cause of well MARIO TIME MARIO TIME",
+  "I love you cause even in death i have a feeling i will meet you",
+  "I love you because youre so damn ambitious abt everything i love it so much",
+  "I love you so much cause ik were meant to be and ill be dammed if i lose you",
+  "I love you so much you make me not wanna kms",
+  "I love you so much i js wanna touch you",
+  "I love you so much i js want a bit of that butt",
+  "I love you so much that you make me wanna do this cringey stuff",
+  "MADE YOU LOOOK AGAIN HAHAHAHAHAHAHAHAHAAHHAHAHAHAHAAH uh pls dont leave me uhhmmm I LOVE YOU YEPPPPPP",
+  "I love you cause you make me wanna say the cringey stuff but i lowkey mean it",
+  "I love you cause you make the happiest man alive",
+  "I love you cause of the way you always look so angelic and perfect in every way",
+  "I love you so much CAUSE YOU CAN COOK A STEAKKKKKKKKKK (still havent made me one but its okay igggggggg)",
+  "I love you cause of the way you play volleyball and are so focued on getting D1",
+  "I love you cause you make me eat and stay healthy (unlike rn my heads spinning)",
+  "I love you even moreee WHEN YOU EAT",
+  "I love you cause you wanna do the app thingy couples do but i never said anything cause i thought u wouldnt like it",
+  "I love you cause you lsiten to me talk abt elden ring AND YOU GO CHECK OUT THE VIDS LIKE UGHHH MARRYY ME",
+  "I love you cause even tho were not close rn you make feel as if im right next to you cause of the pure love and bliss i feel while texting or calling you",
+  "I love you cause you make me wanna do things to make you happy",
+  "I love you cause talking to you abt something lowkey makes my doubts go away",
+  "I love you even tho you dont know how to play the paper sccissor game",
+  "I love you even tho you call me gay on a daily basis (im your boyfriend btwwww)",
+  "I love you cause you dont care what you say sometimes and say some freaky stuff",
+  "I love you cause of the wayyyyyyy youre freaky LIKE ZOO WEE MAMA PULLL UPPPP",
+  "I love you cause of the reels you send me and how you react to mine",
+  "I love you so much cause you never feel like a burden i always feel so free while talking to you",
+  "I love you cause you love me unconditionally no matter what",
+  "I love you cause you made my life better the day you stepped in it",
+  "I love you cause yiu make me feel so lucky and over the whole world everyday",
+  "I love you cause you make me fall in love wth you more and more each passing second",
+  "I love you cause you never make me feel stupid or make me feel less",
+  "I love you cause you remember the stuff i like",
+  "I love you cause you remember the things we did in school",
+  "I love you cause you make my days feel so special and so much better",
+  "I love you cause you chose me out of anyone YOU CHOSE ME WOAHWOAHWOAHWOAHWOAHWOAHWOAHWOAHWOAHWOHA",
+  "I love you cause you make me feel important and never feel like im alone",
+  "I love you cause you always make time for me idk how you do it but somehow you do and i love you so much for that baby",
+  "I love you cause you make me wanna do things for you like get you gifts and well this idek what im doing but i js hope it makes u feel loved even more and shows how much i truly love you and i dont js mean i love you as a word but as an actuall feeling i have towards you and its so immense i dont think itll ever go away",
+  "I love you for a million other things u never make me feel empty alone and sad you never make me feel unloved you always believe in me and help me in so much stuff even if its small you js being there makes my day and my night and i wish one day i get to spend the rest of eternity with you cause ik im gonna be with the person who actually loves me and means i love you for you baby and ill never stop loving you my beautiful girl.",
+  // Keep adding your custom messages here up to 100
+];
+
+
+    reasons.forEach((text, i) => {
+      const btn = document.createElement('button');
+      btn.className = 'reason-btn';
+      btn.textContent = `REASON ${i + 1}`;
+      btn.addEventListener('click', () => {
+        if (btn.nextSibling && btn.nextSibling.classList?.contains('reason-expanded')) {
+          btn.nextSibling.remove();
+          return;
+        }
+        const openReason = document.createElement('div');
+        openReason.className = 'reason-expanded';
+        openReason.textContent = text;
+        btn.insertAdjacentElement('afterend', openReason);
+      });
+      container.appendChild(btn);
+    });
+
+    const createFalling = (char, color) => {
+      const elem = document.createElement('div');
+      elem.className = 'falling';
+      elem.textContent = char;
+      elem.style.left = Math.random() * 100 + 'vw';
+      elem.style.animationDuration = 5 + Math.random() * 9 + 's';
+      elem.style.color = color;
+      document.body.appendChild(elem);
+      setTimeout(() => elem.remove(), 10000);
+    };
+
+    setInterval(() => {
+      const chars = ['💗', '🌸', '💞', '🌺', '💗', '🐶', '🌸', '💖', '🌷', '💘', '🐾', '💝', '🌹', '💕', '💞', '🌺', '💐', '💓', '🌼', '🐕'];
+      const pick = chars[Math.floor(Math.random() * chars.length)];
+      createFalling(pick, '#ff69b4');
+    }, 500);
+  </script>
+</body>
+</html>
